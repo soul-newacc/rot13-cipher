@@ -6,11 +6,11 @@ using namespace std;
 
 int main() {
 	int opcion;
-	cout << "Cifrador y descifrador de rot13, que deseas hacer?\n\n1: Cifrar\n2: Descifrador >> ";
+	cout << "Encryptor and decryptor for rot13, what do you want to do?\n\n1: Encrypt\n2: Decrypt >> ";
 	do {
 		cin>>opcion;
 		if (opcion!=1 && opcion!=2) {
-			cout << "Error, intentelo de nuevo.";
+			cout << "Error, try again";
 			opcion=0;
 		} 
 	} while (opcion!=1 && opcion!=2);
@@ -19,7 +19,7 @@ int main() {
 	
 	if (opcion==1) {
 		string text1, cifrado;
-		cout<<"\nEscribe el texto que quieras cifrar >> ";
+		cout<<"\nWrite the text you want to encrypt >> ";
 		getline(cin, text1);
 		for (int i=0; i<text1.length(); i++) {
 			switch (text1[i]) {
@@ -53,8 +53,8 @@ int main() {
 			}
 			
 		}
-		cout << "Texto original: "<<text1<<endl;
-		cout << "Texto cifrado: "<<cifrado<<endl;
+		cout << "Original text: "<<text1<<endl;
+		cout << "Ciphertext: "<<cifrado<<endl;
 	} else if (opcion==2) {
 		string text2, descifrado;
 		cout << "Escribe el texto que quieras decifrar: ";
@@ -89,8 +89,8 @@ int main() {
 				default: descifrado+=text2[i]; break;
 			}
 		}
-		cout << "Texto cifrado: "<<text2<<endl;
-		cout << "Texto descifrado: "<<descifrado<<endl;
+		cout << "Ciphertext: "<<text2<<endl;
+		cout << "Deciphered text: "<<descifrado<<endl;
 	}
 	
 	return 0;
